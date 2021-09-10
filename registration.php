@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Resgistration Form</title>
+    <title>Resgistration</title>
 </head>
 <style>
     * {
