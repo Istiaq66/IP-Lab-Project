@@ -25,7 +25,8 @@
 
     }
 
-    input,  textarea {
+    input,
+    textarea {
         width: 80%;
         margin: 12px 0px;
         padding: 10px;
@@ -40,7 +41,7 @@
 
     <div class="container">
         <form action="" method="post">
-        <h1>Welcome to IIUC</h1>
+            <h1>Welcome to IIUC</h1>
             <table>
                 <tr>
                     <td>Student Name</td>
@@ -87,7 +88,7 @@
                 <tr>
                     <td>Gender:</td>
                     <td><?php echo $gender ?>
-                </td>
+                    </td>
                 </tr>
             </table>
         </form>

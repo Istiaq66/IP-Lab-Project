@@ -6,7 +6,6 @@
     <title>Resgistration Form</title>
 </head>
 <style>
-
     * {
         margin: 0;
         padding: 0;
@@ -80,7 +79,7 @@
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
     }
 
-    table {
+    .input {
         justify-content: center;
         display: flex;
         flex-direction: column;
@@ -92,6 +91,11 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+
+    .input td {
+        padding-left: 15px;
+    }
+
 
     .submit {
         width: 90%;
@@ -111,7 +115,7 @@
         box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
     }
 
-   
+
 
     select {
         width: 40%;
@@ -139,17 +143,35 @@
         color: black;
     }
 
-    td {
-        padding-left: 15px;
-    }
-
-     .data {
+    .data {
         font-size: 20px;
         margin-top: 10px;
-        padding: 20px;
-        border: 2px solid wheat;
-        border-radius: 10px;
+        padding: 15px;
+        overflow: hidden;
+        border-collapse: collapse;
+        border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .data thead th {
+        background-color: #009879;
+        padding: 15px;
+        text-align: center;
+
+    }
+
+    .data tbody td {
+        padding: 20px;
+        background-color: rgba(0, 255, 128, 0.1) ;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .data tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    
+    .data tr:hover{
+        background-color: #009890;
     }
 
     .data:hover {
@@ -161,7 +183,7 @@
     <div class="container">
         <form action="" method="post">
             <h1>International Islamic University Chittagong</h1><br>
-            <table>
+            <table class="input">
                 <tr>
                     <td>Student Name</td>
                     <td>
@@ -213,30 +235,47 @@
             $gender = $_POST['gender'];
 
             ?>
-            <table class="data" >
-            <h1>Information</h1>
-                <tr>
-                    <td>Student Name:</td>
-                    <td><?php echo $studentName ?></td>
-                </tr>
-                <tr>
-                    <td>Roll:</td>
-                    <td><?php echo $roll ?></td>
-                </tr>
-                <tr>
-                    <td>Password:</td>
-                    <td><?php echo $password ?></td>
-                </tr>
-                <tr>
-                    <td>Date of Birth:</td>
-                    <td><?php echo $date ?></td>
-                </tr>
-                <tr>
-                    <td>Gender:</td>
-                    <td><?php echo $gender ?>
-                    </td>
-                </tr>
-
+            <table class="data">
+                <h1>Information</h1>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Roll</th>
+                        <th>Password</th>
+                        <th>Date of Birth</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><?php echo $studentName ?></td>
+                        <td><?php echo $roll ?></td>
+                        <td><?php echo $password ?></td>
+                        <td><?php echo $date ?></td>
+                        <td><?php echo $gender ?> </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $studentName ?></td>
+                        <td><?php echo $roll ?></td>
+                        <td><?php echo $password ?></td>
+                        <td><?php echo $date ?></td>
+                        <td><?php echo $gender ?> </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $studentName ?></td>
+                        <td><?php echo $roll ?></td>
+                        <td><?php echo $password ?></td>
+                        <td><?php echo $date ?></td>
+                        <td><?php echo $gender ?> </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $studentName ?></td>
+                        <td><?php echo $roll ?></td>
+                        <td><?php echo $password ?></td>
+                        <td><?php echo $date ?></td>
+                        <td><?php echo $gender ?> </td>
+                    </tr>
+                </tbody>
             </table>
         </form>
     </div>
