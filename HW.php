@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Resgistration Form</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="stylish.css">
     <script type="text/javascript">
         var c = 0;
         var b = 0;
@@ -30,6 +30,7 @@
             }
         }
     </script>
+    
 </head>
 
 <body>
