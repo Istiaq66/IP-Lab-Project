@@ -4,185 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Resgistration Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        var c = 0;
+        var b = 0;
+
+        function pop() {
+            if (c == 0) {
+                document.getElementById("box").style.display = "block";
+                c = 1;
+            } else {
+                document.getElementById("box").style.display = "none";
+                c = 0;
+            }
+        }
+
+        function pop2() {
+            if (b == 0) {
+                document.getElementById("box2").style.display = "block";
+                b = 1;
+            } else {
+                document.getElementById("box2").style.display = "none";
+                b = 0;
+            }
+        }
+    </script>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .container {
-        max-width: 60%;
-        border-radius: 10px;
-        margin: 50px auto 50px auto;
-        display: flex;
-        padding: 40px;
-        background-color: rgb(5, 87, 87, 0.7);
-        justify-content: center;
-        color: azure;
-        box-shadow: 0 8px 10px 0 rgba(0, 255, 128, 0.2), 0 8px 20px 0 rgba(0, 255, 128, 0.19);
-
-
-    }
-
-    body {
-        background: url("bg.jpg")no-repeat;
-        background-size: cover;
-    }
-
-    h1 {
-        text-align: center;
-        color: white;
-        text-shadow: 2px 2px 4px #000000;
-    }
-
-    p {
-        padding: 20px;
-        font-size: 20px;
-        text-align: center;
-        color: white;
-    }
-
-
-    a:visited {
-        color: aquamarine;
-        background-color: transparent;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: red;
-        background-color: transparent;
-        text-decoration: underline;
-    }
-
-    input,
-    textarea {
-        width: 90%;
-        margin: 12px 0px;
-        padding: 10px;
-        color: aliceblue;
-        font-size: 16px;
-        background: none;
-        border: 2px solid rgb(0, 255, 128);
-        border-radius: 10px;
-        outline: none;
-        box-shadow: 0 4px 8px 0 rgba(0, 255, 128, 0.2), 0 6px 20px 0 rgba(0, 255, 128, 0.19);
-    }
-
-    input:hover {
-        box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
-    }
-
-    ::-webkit-calendar-picker-indicator {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
-    }
-
-    .input {
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        align-items: center;
-        margin-top: 10px;
-        padding: 20px;
-        border: 2px solid wheat;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .input td {
-        padding-left: 15px;
-    }
-
-
-    .submit {
-        width: 90%;
-        margin-top: 10px;
-        color: rgb(255, 255, 255);
-        padding: 10px;
-        font-size: 20px;
-        border: 2px solid rgb(0, 255, 128);
-        opacity: 0.9;
-        border-radius: 10px;
-        background: rgb(0, 242, 87);
-
-    }
-
-    .submit:hover {
-        opacity: 1;
-        box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
-    }
-
-
-
-    select {
-        width: 40%;
-        margin: 12px 0px;
-        padding: 10px;
-        font-size: 16px;
-        background: none;
-        color: whitesmoke;
-        border: 2px solid rgb(0, 255, 128);
-        border-radius: 10px;
-        outline: none;
-        box-shadow: 0 4px 8px 0 rgba(0, 255, 128, 0.2), 0 6px 20px 0 rgba(0, 255, 128, 0.19);
-    }
-
-    select:hover {
-        box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
-    }
-
-    ::placeholder {
-        color: cadetblue;
-    }
-
-    option {
-        background-color: blanchedalmond;
-        color: black;
-    }
-
-    .data {
-        font-size: 20px;
-        margin-top: 10px;
-        padding: 15px;
-        overflow: hidden;
-        border-collapse: collapse;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .data thead th {
-        background-color: #009879;
-        padding: 15px;
-        text-align: center;
-
-    }
-
-    .data tbody td {
-        padding: 20px;
-        background-color: rgba(0, 255, 128, 0.1) ;
-        border-bottom: 1px solid #dddddd;
-    }
-
-    .data tbody tr:last-of-type {
-        border-bottom: 2px solid #009879;
-    }
-    
-    .data tr:hover{
-        background-color: #009890;
-    }
-
-    .data:hover {
-        box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
-    }
-</style>
 
 <body>
+
+
+    <!-- Display successfull message-->
+    <div id="box">
+
+        <span class="ion-checkmark-round"></span>
+        <h2>
+            Data has been inserted successfully
+        </h2>
+
+        <a onclick="pop()" class="close">Close</a>
+    </div>
+
+
+
+    <!-- Display failed message -->
+    <div id="box2">
+
+        <span class="ion-alert-circled"></span>
+        <h2>
+            Failed to insert data!
+        </h2>
+
+        <a onclick="pop2()" class="close">Close</a>
+    </div>
+
+
+
+    <!-- Main Body -->
     <div class="container">
         <form action="" method="post">
-            <h1>International Islamic University Chittagong</h1><br>
+            <h1 class="Heading">International Islamic University Chittagong</h1><br>
             <table class="input">
                 <tr>
                     <td>Student Name</td>
@@ -222,23 +104,50 @@
             </table>
 
 
-            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+            <p>By creating an account you agree to our <a href="#" class="term">Terms & Privacy</a>.</p>
 
 
             <?php
+            include 'Connection.php';
+            if (isset($_POST['submitButton'])) {
+                //  print_r($_POST);
+                $studentName = $_POST['studentName'];
+                $roll = $_POST['roll'];
+                $password = $_POST['password'];
+                $date = $_POST['Date'];
+                $gender = $_POST['gender'];
 
-            //  print_r($_POST);
-            $studentName = $_POST['studentName'];
-            $roll = $_POST['roll'];
-            $password = $_POST['password'];
-            $date = $_POST['Date'];
-            $gender = $_POST['gender'];
+                $insert_query = "INSERT INTO student(studentName,roll,password,Date,gender) values('$studentName','$roll','$password','$date','$gender')";
+
+                $result = mysqli_query($connection, $insert_query);
+
+
+                if ($result) {
+                    echo "<script> pop(); </script>";
+                } else {
+                    echo "<script> pop2(); </script>";
+                }
+
+
 
             ?>
+
+            <?php
+
+            }
+
+            $select_query = "SELECT * FROM student";
+            $result = mysqli_query($connection, $select_query);
+            $serial = 1;
+
+
+            ?>
+
             <table class="data">
-                <h1>Information</h1>
+                <h1 class="Heading">Information</h1>
                 <thead>
                     <tr>
+                        <!--  <th>Serial</th>-->
                         <th>Student Name</th>
                         <th>Roll</th>
                         <th>Password</th>
@@ -246,37 +155,26 @@
                         <th>Gender</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td><?php echo $studentName ?></td>
-                        <td><?php echo $roll ?></td>
-                        <td><?php echo $password ?></td>
-                        <td><?php echo $date ?></td>
-                        <td><?php echo $gender ?> </td>
-                    </tr>
-                    <tr>
-                        <td><?php echo $studentName ?></td>
-                        <td><?php echo $roll ?></td>
-                        <td><?php echo $password ?></td>
-                        <td><?php echo $date ?></td>
-                        <td><?php echo $gender ?> </td>
-                    </tr>
-                    <tr>
-                        <td><?php echo $studentName ?></td>
-                        <td><?php echo $roll ?></td>
-                        <td><?php echo $password ?></td>
-                        <td><?php echo $date ?></td>
-                        <td><?php echo $gender ?> </td>
-                    </tr>
-                    <tr>
-                        <td><?php echo $studentName ?></td>
-                        <td><?php echo $roll ?></td>
-                        <td><?php echo $password ?></td>
-                        <td><?php echo $date ?></td>
-                        <td><?php echo $gender ?> </td>
-                    </tr>
-                </tbody>
-            </table>
+
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                ?>
+                    <tbody>
+                        <tr>
+                            <!--   <td><?php echo $serial++; ?></td>-->
+                            <td><?php echo $row['studentName'] ?></td>
+                            <td><?php echo $row['roll'] ?></td>
+                            <td><?php echo $row['password'] ?></td>
+                            <td><?php echo $row['Date'] ?></td>
+                            <td><?php echo $row['gender'] ?> </td>
+                        </tr>
+
+                    </tbody>
+
+                <?php
+                }
+                ?>
+                <table>
         </form>
     </div>
 

@@ -1,0 +1,255 @@
+    @import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        .container {
+            max-width: 60%;
+            border-radius: 10px;
+            margin: 50px auto 50px auto;
+            display: flex;
+            padding: 40px;
+            background-color: rgb(5, 87, 87, 0.7);
+            justify-content: center;
+            color: azure;
+            box-shadow: 0 8px 10px 0 rgba(0, 255, 128, 0.2), 0 8px 20px 0 rgba(0, 255, 128, 0.19);
+    
+        }
+    
+        body {
+            background: url("bg.jpg")no-repeat;
+            background-size: cover;
+        }
+    
+        .Heading {
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    
+        p {
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+        }
+    
+    
+        .term:visited {
+            color: aquamarine;
+            background-color: transparent;
+            text-decoration: none;
+        }
+    
+        .term:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+    
+        input,
+        textarea {
+            width: 90%;
+            margin: 12px 0px;
+            padding: 10px;
+            color: aliceblue;
+            font-size: 16px;
+            background: none;
+            border: 2px solid rgb(0, 255, 128);
+            border-radius: 10px;
+            outline: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 255, 128, 0.2), 0 6px 20px 0 rgba(0, 255, 128, 0.19);
+        }
+    
+        input:hover {
+            box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
+        }
+    
+        ::-webkit-calendar-picker-indicator {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+        }
+    
+        .input {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            align-items: center;
+            margin-top: 10px;
+            padding: 20px;
+            border: 2px solid wheat;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    
+        .input td {
+            padding-left: 15px;
+        }
+    
+    
+        .submit {
+            width: 90%;
+            margin-top: 10px;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            font-size: 20px;
+            border: 2px solid rgb(0, 255, 128);
+            opacity: 0.9;
+            border-radius: 10px;
+            background: rgb(0, 242, 87);
+    
+        }
+    
+        .submit:hover {
+            opacity: 1;
+            box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
+        }
+    
+    
+    
+        select {
+            width: 40%;
+            margin: 12px 0px;
+            padding: 10px;
+            font-size: 16px;
+            background: none;
+            color: whitesmoke;
+            border: 2px solid rgb(0, 255, 128);
+            border-radius: 10px;
+            outline: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 255, 128, 0.2), 0 6px 20px 0 rgba(0, 255, 128, 0.19);
+        }
+    
+        select:hover {
+            box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
+        }
+    
+        ::placeholder {
+            color: cadetblue;
+        }
+    
+        option {
+            background-color: blanchedalmond;
+            color: black;
+        }
+    
+        .data {
+            font-size: 20px;
+            margin-top: 10px;
+            padding: 10px;
+            overflow: hidden;
+            text-align: center;
+            border-collapse: collapse;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    
+        .data thead th {
+            background-color: #009879;
+            padding: 15px;
+            text-align: center;
+    
+        }
+    
+        .data tbody td {
+            padding: 20px;
+            background-color: rgba(0, 255, 128, 0.1);
+            border-bottom: 1px solid #dddddd;
+        }
+    
+        .data tr:hover {
+            background-color: #009890;
+        }
+    
+        .data:hover {
+            box-shadow: 0px 8px 15px rgba(72, 255, 59, 0.5);
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat";
+        }
+   
+        .click{
+
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            padding: 10px 30px;
+            cursor: pointer;
+            background: #3498db;
+            display: inline-block;
+            border-radius: 6px;
+        }
+        .click2{
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            padding: 10px 30px;
+            cursor: pointer;
+            background: #3498db;
+            display: inline-block;
+            border-radius: 6px;
+        }
+        #box {
+            width: 500px;
+            overflow: hidden;
+            background: #f1f1f1;
+            box-shadow: 0 0 20px black;
+            border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+        #box2 {
+            width: 500px;
+            overflow: hidden;
+            background: #f1f1f1;
+            box-shadow: 0 0 20px black;
+            border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        .ion-checkmark-round {
+            color: #2ecc71;
+            font-size: 40px;
+            display: block;
+            margin: 20px 0;
+        }
+        .ion-alert-circled{
+            color: red;
+            font-size: 40px;
+            display: block;
+            margin: 20px 0;
+        }
+
+        #box h1 {
+            color: #333;
+        }
+
+        .close {
+            margin-top: 15px;
+            font-size: 20px;
+            color: white;
+            padding: 10px 30px;
+            cursor: pointer;
+            background: #3498db;
+            display: inline-block;
+            border-radius: 6px;
+        }

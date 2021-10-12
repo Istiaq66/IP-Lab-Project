@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <a onclick="pop()" class="click">Click</a>
+    <a onclick="pop2()" class="click2">Click2</a>
+
+    <!-- Display successfull message-->
+    <div id="box">
+
+        <span class="ion-checkmark-round"></span>
+        <h2>
+            Data has been inserted successfully
+        </h2>
+
+        <a onclick="pop()" class="close">Close</a>
+    </div>
+
+
+
+    <!-- Display failed message -->
+    <div id="box2">
+
+        <span class="ion-alert-circled"></span>
+        <h2>
+            Failed to insert data!
+        </h2>
+
+        <a onclick="pop2()" class="close">Close</a>
+    </div>
+
+
+    <script type="text/javascript">
+        var c = 0;
+        var b = 0;
+        function pop() {
+            if (c == 0) {
+                document.getElementById("box").style.display = "block";
+                c = 1;
+            }
+            else {
+                document.getElementById("box").style.display = "none";
+                c = 0;
+            }
+        }
+        function pop2() {
+            if (b == 0) {
+                document.getElementById("box2").style.display = "block";
+                b = 1;
+            } else {
+                document.getElementById("box2").style.display = "none";
+                b = 0;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
